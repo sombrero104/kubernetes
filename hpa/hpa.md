@@ -3,7 +3,7 @@
 # HPA 오토스케일러 테스트
 <br/>
 
-# HPA (HorizontalPodAutoscaler)
+## HPA (HorizontalPodAutoscaler)
 워크로드의 크기를 수요에 맞게 자동으로 스케일링한다. <br/>
 수평 스케일링(HPA, HorizontalPodAutoscaler)은 부하 증가에 대해 파드를 더 배치하는 것을 뜻한다. <br/>
 이는 수직 스케일링(VPA, VerticalPodAutoscaler) 과는 다른데, <br/>
