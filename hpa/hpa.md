@@ -13,7 +13,11 @@
 
 
 <img src="./images/hpa-test-01.png" width="80%" /><br/>
+<br/><br/>
 
+#### 참조
+https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale/ <br/><br/>
+https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/ <br/>
 
 <br/><br/><br/><br/>
 
