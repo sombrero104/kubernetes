@@ -32,8 +32,11 @@ kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 <br/>
 
 ### HPA 오토스케일러 상태 확인
+아래 명령으로 파드가 얼마나 증가하고 감소하는지 현재의 오토스케일링 상태를 확인할 수 있다. <br/>
 ~~~
 kubectl get hpa 
+
+kubectl get hpa php-apache --watch
 ~~~
 <br/>
 
@@ -46,7 +49,7 @@ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never --
 <img src="./images/hpa-test-01.png" width="80%" /><br/>
 <br/><br/>
 
-#### * 참조
+#### [참조] 
 https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale/ <br/><br/>
 https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/ <br/>
 
