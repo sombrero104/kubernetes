@@ -41,16 +41,20 @@ kubectl get hpa php-apache --watch
 <br/>
 
 ### 서비스 요청 무한 루프 실행 (부하 증가)
+아래 명령으로 샘플 애플리케이션에 무한 루프로 쿼리를 실행하여 부하를 증가 시킨 후 파드의 증가/감소 상태를 확인 한다. <br/>
 ~~~
 kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
 ~~~
-<br/><br/>
+<br/>
 
+### 실행 화면 
 <img src="./images/hpa-test-01.png" width="80%" /><br/>
 <br/><br/>
 
 #### [참조] 
-https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale/ <br/><br/>
+
+https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale/ <br/>
+
 https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/ <br/>
 
 <br/><br/><br/><br/>
