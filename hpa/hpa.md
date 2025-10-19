@@ -11,12 +11,21 @@
 <br/>
 
 ### 샘플 애플리케이션 서비스 생성 
+부하를 증가시키기 위한 샘플 애플리케이션의 파드를 생성한다. <br/>
 ~~~
 kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
 ~~~
 <br/>
 
+### 모든 파드 상태 확인 
+파드 상태를 지켜보기 위해 아래 명령을 실행한 프롬프트를 띄워놓는다. <br/>
+~~~
+kubectl get pods --all-namespaces -o wide 
+~~~
+<br/>
+
 ### HPA 오토스케일러 생성 
+위에서 생성한 샘플 애플리케이션에 대한 오토스케일러를 생성한다. <br/>
 ~~~
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 ~~~
@@ -28,7 +37,7 @@ kubectl get hpa
 ~~~
 <br/>
 
-### 서비스 요청 무한 반복 실행 (부하 증가)
+### 서비스 요청 무한 루프 실행 (부하 증가)
 ~~~
 kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
 ~~~
