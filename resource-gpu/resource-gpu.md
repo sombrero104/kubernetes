@@ -18,7 +18,7 @@ kubectl debug node/<노드이름> -n <네임스페이스> -it --image=nvidia/cud
 <br/>
 디버그 파드가 생성 되면서 해당 파드에 바로 접속하게 된다.
 디버그 파드 접속 후 아래 명령으로 GPU 사용률을 확인할 수 있다.
-<br/>
+<br/><br/>
 
 ~~~
 nvidia-smi
