@@ -23,6 +23,9 @@ GPU를 사용하는 노드의 GPU 사용률을 확인하기 위해 <br/>
 ~~~
 % nvidia-smi
 ~~~
+~~~
+% nvidia-smi -l 1
+~~~
 
 <br/><br/><br/>
 
